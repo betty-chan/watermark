@@ -70,6 +70,8 @@
   //移除水印
   watermark.remove = function remove() {
     watermarkDom.disconnect();
+    window.removeEventListener('onload', loadMark);
+    window.removeEventListener('resize', loadMark)
     var watermark_element = document.getElementById(globalSetting.watermark_id);
     var _parentElement = watermark_element.parentNode;
     _parentElement.removeChild(watermark_element);
