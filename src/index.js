@@ -11,7 +11,7 @@
     /*Browser globals (root is window)*/
     root['watermark'] = factory();
   }
-}(this, function () {
+}(window, function () {
   /*全局变量声明*/
   var watermark = {}
   var globalSetting;
